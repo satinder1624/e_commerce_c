@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Raleway:wght@300&display=swap");
+
+@import url("//db.onlinewebfonts.com/c/8491a449cb242143453432ee81f0051d?family=VoxRoundW01-Semibold");
+
+@app-background: rgb(238, 246, 251);
+@background-color-container: rgb(238, 246, 251);
+@cloud-color: rgb(205, 240, 240);
+@full-height: 100vh;
+@maxWidth: 50rem;
+@dataContainerBackgroundColor: White;
+@fontSizeAndMargin: 2rem;
+
+@border-radius: 0.8rem;
+@today-font: "Raleway", "sans-serif";
+@degree-font: "VoxRoundW01-Semibold", "Vox Round Semibold", "Noto Sans",
+  "sans-serif";
+@OneRem: 1rem;
+@marginZero: 0.4rem;
+
+.center {
+  max-width: @maxWidth;
+  margin: 0 auto;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-space-around {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-column-space-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-center-end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.App {
+  text-align: center;
+  height: @full-height;
+  background-color: @app-background;
+}
+
+.cityNames {
+  .flex-space-around();
+  .center();
+
+  & > h1 {
+    cursor: pointer;
+  }
+}
+
+.dataContainer {
+  background-color: @dataContainerBackgroundColor;
+  max-width: @maxWidth;
+  margin: @fontSizeAndMargin auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .flex-column-space-between();
+  height: fit-content;
+  border-radius: @border-radius;
+  padding-bottom: 0.5rem;
+}
+
+.todayContainer {
+  height: 25vh;
+  margin: @marginZero;
+  .flex-column-center();
+  background-color: @background-color-container;
+  border-top-left-radius: @border-radius;
+  border-top-right-radius: @border-radius;
+  font-family: @today-font;
+  &-description {
+    .flex-center-end();
+    margin-top: @fontSizeAndMargin;
+
+    &--temp {
+      .flex-column();
+      text-align: start;
+      margin-left: @OneRem;
+      font-size: @fontSizeAndMargin;
+    }
+  }
+}
+
+.subDataContainer {
+  .flex-wrap();
+}
+
+.space {
+  margin: @OneRem 0;
+}
+
+.todayText {
+  font-size: 2.5rem;
+}
+
+.degreeText {
+  font-family: @degree-font;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  .font-bold();
+}
+
+.colorChangeCloud {
+  color: @cloud-color;
+}
+
+.forecastContainer {
+  background-color: @background-color-container;
+  .flex-column();
+  flex: 1;
+  margin: 0 0.25rem;
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.forecastContainer-description,
+.forecastContainer-description--temp {
+  margin-top: @OneRem;
+}
+
+.nextDayText {
+  font-family: @today-font;
+  font-size: 1.4rem;
+  .font-bold();
+}
+
+.degreeTextSub {
+  font-family: @degree-font;
+  font-size: 1.8rem;
+  .font-bold();
+}
+
+@media only screen and (max-width: 693px) {
+  .forecastContainer {
+    margin-top: @marginZero;
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .dataContainer {
+    margin: @OneRem @fontSizeAndMargin;
+  }
+}
+
+@media only screen and (max-width: 433px) {
+  .cityNames {
+    flex-direction: column;
+    width: fit-content;
+    text-align: left;
+  }
+}

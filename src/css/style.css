@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEooCP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v21/o-0NIpQlx3QUlC5A4PNjXhFlYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEooCP.ttf) format('truetype');
+}
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+@font-face {
+  font-family: "VoxRoundW01-Semibold";
+  src: url("http://db.onlinewebfonts.com/t/8491a449cb242143453432ee81f0051d.eot");
+  /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/8491a449cb242143453432ee81f0051d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("http://db.onlinewebfonts.com/t/8491a449cb242143453432ee81f0051d.woff2") format("woff2"), /* chrome firefox */ url("http://db.onlinewebfonts.com/t/8491a449cb242143453432ee81f0051d.woff") format("woff"), /* chrome firefox */ url("http://db.onlinewebfonts.com/t/8491a449cb242143453432ee81f0051d.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/ url("http://db.onlinewebfonts.com/t/8491a449cb242143453432ee81f0051d.svg#VoxRoundW01-Semibold") format("svg");
+  /* iOS 4.1- */
+}
+.center {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-space-around {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-column-space-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-center-end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.font-bold {
+  font-weight: bold;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #eef6fb;
+}
+.cityNames {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.cityNames > h1 {
+  cursor: pointer;
+}
+.dataContainer {
+  background-color: White;
+  max-width: 50rem;
+  margin: 2rem auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+  border-radius: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+.todayContainer {
+  height: 25vh;
+  margin: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #eef6fb;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  font-family: "Raleway", "sans-serif";
+}
+.todayContainer-description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+.todayContainer-description--temp {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+.subDataContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.space {
+  margin: 1rem 0;
+}
+.todayText {
+  font-size: 2.5rem;
+}
+.degreeText {
+  font-family: "VoxRoundW01-Semibold", "Vox Round Semibold", "Noto Sans", "sans-serif";
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: bold;
+}
+.colorChangeCloud {
+  color: #cdf0f0;
+}
+.forecastContainer {
+  background-color: #eef6fb;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 0.25rem;
+  padding: 1.5rem;
+  height: fit-content;
+}
+.forecastContainer-description,
+.forecastContainer-description--temp {
+  margin-top: 1rem;
+}
+.nextDayText {
+  font-family: "Raleway", "sans-serif";
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.degreeTextSub {
+  font-family: "VoxRoundW01-Semibold", "Vox Round Semibold", "Noto Sans", "sans-serif";
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 693px) {
+  .forecastContainer {
+    margin-top: 0.4rem;
+  }
+}
+@media only screen and (max-width: 815px) {
+  .dataContainer {
+    margin: 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 433px) {
+  .cityNames {
+    flex-direction: column;
+    width: fit-content;
+    text-align: left;
+  }
+}
